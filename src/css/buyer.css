@@ -1,0 +1,335 @@
+
+:root {
+  --bg: #f5f5f5;
+  --text: #222;
+  --card-bg: #fff;
+  --primary: teal;
+  --shadow: rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="dark"] {
+  --bg: #1e1e1e;
+  --text: #eee;
+  --card-bg: #2a2a2a;
+  --primary: teal;
+  --shadow: rgba(0, 0, 0, 0.3);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar3 {
+  background-color: var(--primary);
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.navbar3 .logo3 {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav-links3 {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links3 .profile-toggle3 {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.nav-links3 .profile-toggle3 img.user-icon3 {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.nav-links3 #userName3 {
+  color: white;
+}
+
+.category-menu3 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 1rem;
+  background-color: var(--card-bg);
+}
+
+.category-menu3 a {
+  text-decoration: none;
+  color: var(--text);
+  margin: 10px 0;
+  font-size: 1.1rem;
+}
+
+.category-menu3 a:hover {
+  color: var(--primary);
+}
+
+.page3 {
+  display: none;
+}
+
+.page3.active {
+  display: block;
+}
+
+.recommendations3 {
+  padding: 1rem;
+}
+
+.products3 {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.product-card3 {
+  width: 250px;
+  margin: 1rem;
+  padding: 10px;
+  background-color: var(--card-bg);
+  border-radius: 10px;
+  box-shadow: 0 4px 6px var(--shadow);
+  text-align: left;
+  cursor: pointer;
+}
+
+.product-card3 img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.product-card3 h3 {
+  margin-top: 10px;
+  color: var(--primary);
+}
+
+.product-card3 p {
+  color: var(--text);
+}
+
+.product-card3:hover {
+  box-shadow: 0 6px 10px var(--shadow);
+}
+
+.product-container3 {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.product-details3 {
+  width: 60%;
+}
+
+.product-price3 {
+  font-size: 1.5rem;
+  color: var(--primary);
+  margin-top: 10px;
+}
+
+.product-description3 {
+  margin-top: 15px;
+  font-size: 1rem;
+}
+
+.product-image3 img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.buy-btn3 {
+  background-color: var(--primary);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  margin-top: 15px;
+  cursor: pointer;
+}
+
+.buy-btn3:hover {
+  background-color: #009999;
+}
+
+.dashboard3 {
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: var(--card-bg);
+  padding: 2rem;
+  box-shadow: -4px 0 6px var(--shadow);
+  display: none;
+}
+
+.dashboard3.active {
+  display: block;
+}
+
+.dashboard3 ul {
+  list-style-type: none;
+}
+
+.dashboard3 ul li button {
+  background: none;
+  border: none;
+  color: var(--text);
+  font-size: 1.1rem;
+  padding: 10px;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+}
+
+.dashboard3 ul li button:hover {
+  background-color: var(--primary);
+  color: white;
+}
+
+#themeToggle3 {
+  background-color: var(--primary);
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#themeToggle3:hover {
+  background-color: #009999;
+}
+
+#profileToggle3 {
+  cursor: pointer;
+}
+
+#profileToggle3:hover .profile-toggle3 {
+  background-color: #f0f0f0;
+}
+.negotiate-section3 {
+  margin-top: 1rem;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.negotiate-input3 {
+  padding: 0.4rem;
+  border-radius: 8px;
+  border: 1px solid var(--border-color, #ccc);
+  flex: 1;
+}
+
+.negotiate-btn3 {
+  padding: 0.5rem 1rem;
+  background-color: #f0ad4e;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+/* Styling for the orders section to match the product cards layout */
+.orders-section {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.orders-section h2 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #333; /* Adjust based on your theme */
+}
+
+.orders-section ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Space between cards */
+  list-style: none;
+  padding: 0;
+}
+
+.orders-section li {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 200px; /* Match the width of product cards in the image */
+  padding: 10px;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.orders-section li:hover {
+  transform: translateY(-5px); /* Hover effect similar to product cards */
+}
+
+.orders-section .order-image {
+  width: 100%;
+  height: 150px; /* Adjust based on the image aspect ratio */
+  object-fit: cover; /* Ensure the image fits nicely */
+  border-radius: 8px 8px 0 0; /* Rounded top corners */
+}
+
+.orders-section li strong {
+  display: block;
+  font-size: 16px;
+  font-weight: 500;
+  margin: 10px 0;
+  color: #333; /* Adjust based on your theme */
+}
+
+.orders-section li p {
+  font-size: 14px;
+  color: #666; /* Slightly lighter color for secondary text */
+  margin: 5px 0;
+}
+
+.orders-section li p:first-of-type {
+  font-size: 16px;
+  font-weight: 600;
+  color: #008080; /* Teal color for the price, matching the image */
+}
+
+/* Back button styling */
+.back-btn3 {
+  display: inline-block;
+  padding: 8px 16px;
+  margin-bottom: 20px;
+  background-color: #008080; /* Teal color matching the navbar */
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.2s ease;
+}
+
+.back-btn3:hover {
+  background-color: #006666; /* Slightly darker teal on hover */
+}
+
+/* If no orders message */
+.orders-section p {
+  font-size: 16px;
+  color: #666;
+  text-align: center;
+  margin-top: 20px;
+}
+
+

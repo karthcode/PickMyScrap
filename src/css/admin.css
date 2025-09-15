@@ -1,0 +1,278 @@
+/* Universal Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+/* Dark Mode Variables */
+:root {
+  --bg-color: #fff;
+  --text-color: #000;
+}
+
+[data-theme="dark"] {
+  --bg-color: #121212;
+  --text-color: #ffffff;
+}
+
+/* Navbar */
+.navbar5 {
+  background-color: dodgerblue;
+  color: white;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+.nav-links5 {
+  display: flex;
+  align-items: center;
+}
+
+.profile-toggle5 {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.profile-toggle5 span {
+  margin-left: 8px;
+}
+
+.profile-toggle5:hover {
+  color: darkblue;
+}
+
+.logo5 {
+  font-family: optima;
+  font-size: 30px;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+  margin-left: 20px;
+  letter-spacing: 2px;
+  transition: color 0.3s ease;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Dashboard Drawer */
+.dashboard-drawer5 {
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: var(--bg-color);
+  padding: 2rem;
+  box-shadow: -4px 0 6px rgba(0, 0, 0, 0.1);
+  display: none;
+  color: var(--text-color);
+}
+
+.dashboard-drawer5.open {
+  display: block;
+}
+
+.dashboard-drawer5 h3 {
+  color: var(--text-color);
+}
+
+.dashboard-drawer5 ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.dashboard-drawer5 ul li button {
+  background: none;
+  border: none;
+  color: var(--text-color);
+  font-size: 1.1rem;
+  padding: 10px;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+}
+
+.dashboard-drawer5 ul li button:hover {
+  background-color: dodgerblue;
+  color: white;
+}
+
+.close-btn5 {
+  background: none;
+  border: none;
+  color: var(--text-color);
+  font-size: 1.5rem;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+
+/* Admin Dashboard */
+.admin-dashboard {
+  padding: 2rem;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+.admin-dashboard h1 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: var(--text-color);
+}
+
+.admin-dashboard h2 {
+  font-size: 1.5rem;
+  margin: 1rem 0;
+  color: var(--text-color);
+}
+
+.error {
+  color: red;
+  margin-bottom: 1rem;
+}
+
+/* User Table */
+.user-table {
+  width: 100%;
+  border-collapse: collapse;
+  color: var(--text-color);
+  margin-bottom: 2rem;
+}
+
+.user-table th,
+.user-table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ccc;
+}
+
+.user-table th {
+  background-color: dodgerblue;
+  color: white;
+  font-weight: bold;
+}
+
+.user-table tbody tr:nth-child(even) {
+  background-color: #f8f8f8;
+}
+
+[data-theme="dark"] .user-table tbody tr:nth-child(even) {
+  background-color: #2a2a2a;
+}
+
+/* Listings Section (used for both Listings and Orders) */
+.listings-section {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.listings-section h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: var(--text-color);
+}
+
+.listings-section p {
+  color: var(--text-color);
+}
+
+/* Products (used for both Listings and Orders) */
+.products5 {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.product-card5 {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  color: var(--text-color);
+  transition: transform 0.2s;
+}
+
+[data-theme="dark"] .product-card2 {
+  background: #444;
+}
+
+.product-card5:hover {
+  transform: translateY(-5px);
+}
+
+.product-card5 img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.product-card5 h3 {
+  font-size: 1.2rem;
+  margin: 0.5rem 0;
+  color: #28a745;
+}
+
+.product-card5 p {
+  font-size: 0.9rem;
+  margin: 0.3rem 0;
+}
+
+/* Buttons */
+button.delete-btn5 {
+  background-color: dodgerblue;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+button.delete-btn5:hover {
+  background-color: dodgerblue;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .listings-section {
+    padding: 15px;
+    margin: 10px;
+  }
+
+  .products5 {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+  }
+
+  .product-card5 img {
+    height: 150px;
+  }
+
+  .product-card5 h3 {
+    font-size: 16px;
+  }
+
+  .product-card5 p {
+    font-size: 14px;
+  }
+}

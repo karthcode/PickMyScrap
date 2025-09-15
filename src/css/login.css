@@ -1,0 +1,245 @@
+.scrap-login-wrapper {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(to right, #8e2de2, #4a00e0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.scrap-login-container {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25),
+              0 10px 10px rgba(0,0,0,0.22);
+  position: relative;
+  width: 768px;
+  max-width: 100%;
+  min-height: 480px;
+  overflow: hidden;
+}
+
+.scrap-login-form-container {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  transition: all 0.6s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 50px;
+  text-align: center;
+}
+
+.scrap-login-sign-in-container {
+  left: 0;
+  width: 50%;
+  z-index: 2;
+}
+
+.scrap-login-sign-up-container {
+  left: 0;
+  width: 50%;
+  opacity: 0;
+  z-index: 1;
+}
+
+.scrap-login-wrapper.scrap-login-right-panel-active .scrap-login-sign-up-container {
+  transform: translateX(100%);
+  opacity: 1;
+  z-index: 5;
+}
+
+.scrap-login-wrapper.scrap-login-right-panel-active .scrap-login-sign-in-container {
+  transform: translateX(100%);
+  opacity: 0;
+  z-index: 1;
+}
+
+.scrap-login-container form input,
+.scrap-login-container form select {
+  background-color: #eee;
+  border: none;
+  padding: 12px 15px;
+  margin: 8px 0;
+  width: 100%;
+  font-family: inherit;
+  font-size: 14px;
+}
+
+.scrap-login-container form button {
+  border: none;
+  padding: 12px 45px;
+  background-color: #4a00e0;
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 20px;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: transform 80ms ease-in;
+}
+
+.scrap-login-container form button:active {
+  transform: scale(0.95);
+}
+
+.scrap-login-ghost {
+  background-color: transparent !important;
+  border: 2px solid #fff !important;
+  border: none;
+    padding: 12px 45px;
+    background-color: #4a00e0;
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: transform 80ms ease-in;
+}
+.scrap-login-overlay-container {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  transition: transform 0.6s ease-in-out;
+  z-index: 100;
+}
+
+.scrap-login-wrapper.scrap-login-right-panel-active .scrap-login-overlay-container {
+  transform: translateX(-100%);
+}
+
+.scrap-login-overlay {
+  background: linear-gradient(to right, #4a00e0, #8e2de2);
+  color: #fff;
+  position: relative;
+  left: -100%;
+  height: 100%;
+  width: 200%;
+  transform: translateX(0);
+  transition: transform 0.6s ease-in-out;
+}
+
+.scrap-login-wrapper.scrap-login-right-panel-active .scrap-login-overlay {
+  transform: translateX(50%);
+}
+
+.scrap-login-overlay-panel {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 40px;
+  text-align: center;
+  top: 0;
+  height: 100%;
+  width: 50%;
+  transform: translateX(0);
+  transition: transform 0.6s ease-in-out;
+}
+
+.scrap-login-overlay-left {
+  transform: translateX(-20%);
+}
+
+.scrap-login-wrapper.scrap-login-right-panel-active .scrap-login-overlay-left {
+  transform: translateX(0);
+}
+
+.scrap-login-overlay-right {
+  right: 0;
+  transform: translateX(0);
+}
+
+.scrap-login-wrapper.scrap-login-right-panel-active .scrap-login-overlay-right {
+  transform: translateX(20%);
+}
+
+.input-group {
+  position: relative;
+  width: 100%;
+  margin: 8px 0;
+}
+
+.input-group input:focus + label,
+.input-group input:not(:placeholder-shown) + label,
+.input-group select:focus + label {
+  transform: translateY(-20px);
+  font-size: 12px;
+  color: #4a00e0;
+}
+
+.input-group label {
+  position: absolute;
+  top: 12px;
+  left: 15px;
+  font-size: 14px;
+  color: #777;
+  pointer-events: none;
+  transition: 0.2s ease all;
+}
+
+input:focus+label{
+  transform: translateY(-25px);
+  color: #4a00e0;
+}
+
+input:focus{
+  border-color:  #4a00e0;
+  
+}
+
+body.buyer-theme {
+  background: linear-gradient(to right, #00c9a7, #92fe9d);
+}
+
+body.seller-theme {
+  background: linear-gradient(to right, #ff416c, #ff4b2b);
+}
+
+body {
+  transition: background 0.8s ease;
+}
+
+
+
+.scrap-login-wrapper.buyer-theme {
+  background: linear-gradient(to right, #a0f0e0, #008080);
+  transition: background 0.8s ease-in-out;
+}
+
+.scrap-login-wrapper.seller-theme {
+  background: linear-gradient(to right, #ffe4b5, #e3a01f);
+  transition: background 0.8s ease-in-out;
+}
+
+* {
+  transition: all 0.3s ease;
+}
+/* Theme Backgrounds */
+.buyer-theme {
+  background: linear-gradient(to right, #b2fefa, #0ed2f7, #008080);
+  transition: background 0.8s ease-in-out;
+}
+
+.seller-theme {
+  background: linear-gradient(to right, #fceabb, #f8b500, #e3a01f);
+  transition: background 0.8s ease-in-out;
+}
+
+/* Card Styles */
+.buyer-theme .scrap-login-container {
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 14px 28px rgba(0, 128, 128, 0.3), 0 10px 10px rgba(0, 128, 128, 0.22);
+}
+
+.seller-theme .scrap-login-container {
+  background: rgba(255, 255, 240, 0.95);
+  box-shadow: 0 14px 28px rgba(227, 160, 31, 0.3), 0 10px 10px rgba(227, 160, 31, 0.22);
+}

@@ -1,23 +1,28 @@
-import logo from './logo.svg';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import Landingpage from '../src/components/landingpage';
+ import Login from '../src/components/login';
+import React from 'react';
+import SellerDashboard from '../src/components/seller';
+// this is changes app.js
+import Buyers from './components/buyer'
 import './App.css';
+import AdminDashboard from './components/admin';
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    
+    <Router>
+      <Routes>
+        <Route path="/" element={<Landingpage />} />
+      <Route path="/login" element={<Login />} />  
+      <Route path='/seller' element={<SellerDashboard />} />
+     
+      <Route path="/buyer" element={<Buyers />} />    
+      <Route path="/admin" element={<AdminDashboard />} />
+
+      </Routes>
+    </Router> 
+   
   );
 }
+
 export default App;
