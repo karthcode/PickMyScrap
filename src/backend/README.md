@@ -1,110 +1,103 @@
 # 🛠️ PickMyScrap – Backend
 
-A lightweight and fast backend powering the **PickMyScrap** sustainable scrap-trading platform.  
-It handles authentication, seller listings, buyer actions, admin workflows, and all database operations.
+A **scalable, lightweight, and high-performance backend** that powers the **PickMyScrap** sustainable scrap-trading platform.
+
+This backend manages **authentication**, **seller listings**, **buyer interactions**, **admin workflows**, and **all database operations**, ensuring a secure and transparent peer-to-peer trading experience.
 
 ---
 
 ## 🚀 Tech Stack
-- **Node.js**
-- **Express.js**
-- **MongoDB (Mongoose)**
-- **JWT Authentication**
-- **Multer** (image handling)
-- **Cors + dotenv**
+
+* **Node.js** – JavaScript runtime
+* **Express.js** – Backend framework
+* **MongoDB (Mongoose)** – NoSQL database & ODM
+* **JWT Authentication** – Secure user sessions
+* **CORS** – Cross-origin access control
+* **dotenv** – Environment variable management
 
 ---
 
 ## 📁 Folder Structure
+
+```
 backend/
-│── controllers/ # All business logic
-│── models/ # Mongoose schemas
-│── routes/ # API endpoints
-│── middleware/ # Auth, validation, uploads
-│── uploads/ # Uploaded images (if stored locally)
-│── config/ # DB config
-│── server.js # App entry point
-│── README.md
+│── controllers/        # Business logic & request handling
+│── models/             # Mongoose schemas
+│── routes/             # API endpoints
+│── middleware/         # Auth, validation, uploads
+│── uploads/            # Uploaded images (local storage)
+│── config/             # Database & environment config
+│── server.js           # Application entry point
+│── README.md           # Backend documentation
+```
 
-yaml
-Copy code
-
----
-
-## 🔐 Environment Variables
-Create a `.env` file:
-
-PORT=5000
-MONGO_URI=your_mongodb_url
-JWT_SECRET=your_secret_key
-
-markdown
-Copy code
+This structure ensures **clean separation of concerns**, making the backend easy to maintain and scale.
 
 ---
 
 ## 🔌 API Overview
-### **Auth**
-- `POST /auth/signup`
-- `POST /auth/login`
 
-### **Seller**
-- `POST /seller/create`
-- `GET /seller/all`
-- `GET /seller/:id`
+### 🔑 Authentication
 
-### **Buyer**
-- `POST /buyer/offer`
-- `POST /buyer/negotiation`
-- `GET  /buyer/listings`
-
-### **Admin**
-- `GET /admin/users`
-- `GET /admin/listings`
+* `POST /auth/signup` – User registration
+* `POST /auth/login` – User login & token generation
 
 ---
 
-## ▶️ Running the Backend
+### 🧑‍💼 Seller
 
-### **1. Install dependencies**
-npm install
+* `POST /seller/create` – Create a scrap listing
+* `GET /seller/all` – View all listings
+* `GET /seller/:id` – View seller-specific listings
 
-markdown
-Copy code
+---
 
-### **2. Start server**
-npm start
+### 🛒 Buyer
 
-markdown
-Copy code
+* `GET  /buyer/listings` – Browse available scrap listings
+* `POST /buyer/offer` – Accept a listing
 
-### **3. Development mode**
-npm run dev
+---
 
-nginx
-Copy code
+### 🛡️ Admin
 
-Backend runs on:
-http://localhost:5000
-
-yaml
-Copy code
+* `GET /admin/users` – View all registered users
+* `GET /admin/listings` – Monitor all scrap listings
 
 ---
 
 ## 🧩 Deployment Ready
-- Supports hosting on Render / Railway / Vercel (serverless express)
-- CORS-enabled
-- Clean separation of controllers & routes for easy scaling
+
+* Compatible with **Render**, **Railway**, and **Vercel **
+* CORS-enabled for frontend integration
+* Clean controller-route architecture
+* Easily extensible for:
+
+  * AI price prediction
+  * Logistics & pickup scheduling
+  * Real-time notifications
 
 ---
 
 ## ⚙️ Troubleshooting
-| Issue | Fix |
-|------|------|
-| MongoDB not connecting | Check `MONGO_URI` |
-| JWT errors | Reset `JWT_SECRET` |
-| Images not saving | Ensure `/uploads` exists |
-| CORS blocked | Add your frontend domain to CORS |
+
+| Issue                     | Solution                           |
+| ------------------------- | ---------------------------------- |
+| MongoDB not connecting    | Verify `MONGO_URI`                 |
+| JWT authentication errors | Regenerate `JWT_SECRET`            |
+| Images not saving         | Ensure `/uploads` folder exists    |
+| CORS blocked              | Add frontend domain to CORS config |
 
 ---
+
+## 📈 Future Enhancements
+
+* Role-based admin permissions
+* Transaction history & analytics
+* AI-driven scrap price suggestions
+* Secure cloud image storage (AWS S3 / Cloudinary)
+* Real-time updates using WebSockets
+
+---
+
+
