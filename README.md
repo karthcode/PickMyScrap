@@ -1,3 +1,5 @@
+<img width="1536" height="1024" alt="afc1f73b-42ce-48cf-8f94-a2dcead25ec6" src="https://github.com/user-attachments/assets/c0f3ce87-14cd-4a16-b117-36de802e351e" />
+
 # ♻️ PickMyScrap
 
 **Direct Scrap Trading. Zero Middlemen. 100% Transparency.**
